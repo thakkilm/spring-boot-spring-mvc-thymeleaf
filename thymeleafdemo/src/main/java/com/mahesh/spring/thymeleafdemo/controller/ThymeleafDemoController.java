@@ -11,4 +11,6 @@ public class ThymeleafDemoController {
         theModel.addAttribute("theDate",new java.util.Date());
         return "helloworld";
     }
+
+
 }
