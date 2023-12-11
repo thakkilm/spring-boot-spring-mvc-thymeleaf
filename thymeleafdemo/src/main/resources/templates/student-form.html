@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Student Registration Form</title>
@@ -13,14 +13,21 @@
   <input type="text" id="lastName" th:field="*{lastName}" required>
     <label >Select a Country:</label>
     <select th:field="*{country}"  required>
-        <option value="usa">United States</option>
-        <option value="canada">Canada</option>
-        <option value="uk">United Kingdom</option>
-        <option value="australia">Australia</option>
-        <option value="germany">Germany</option>
-    </select>
 
-  <button type="submit">Submit</button>
+        <option th:each="tempCountry:${countries}" th:value="${tempCountry}" th:text="${tempCountry}"/>
+<!--        <option value="usa">United States</option>-->
+<!--        <option value="canada">Canada</option>-->
+<!--        <option value="uk">United Kingdom</option>-->
+<!--        <option value="australia">Australia</option>-->
+<!--        <option value="germany">Germany</option>-->
+    </select>
+    <br><br>
+    <input type="radio" th:field="*{language}" th:value="Go">Go</input>
+    <input type="radio" th:field="*{language}" th:value="Java">Java</input>
+    <input type="radio" th:field="*{language}" th:value="Pyhton">Pyhton</input>
+
+
+    <button type="submit">Submit</button>
 </form>
 </body>
 </html>
