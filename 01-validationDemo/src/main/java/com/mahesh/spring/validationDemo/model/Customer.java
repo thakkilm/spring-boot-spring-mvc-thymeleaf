@@ -1,5 +1,6 @@
 package com.mahesh.spring.validationDemo.model;
 
+import com.mahesh.spring.validationDemo.validation.CourseCode;
 import jakarta.validation.constraints.*;
 
 public class Customer {
@@ -25,6 +26,17 @@ public class Customer {
 private Integer freePasses;
     @Pattern(regexp = "^[a-zA-Z0-9]{5}", message = "Yedava")
     private String postalCode;
+
+    public String getCouseCode() {
+        return couseCode;
+    }
+
+    public void setCouseCode(String couseCode) {
+        this.couseCode = couseCode;
+    }
+
+    @CourseCode
+    private String couseCode;
     public String getPostalCode() {
         return postalCode;
     }
