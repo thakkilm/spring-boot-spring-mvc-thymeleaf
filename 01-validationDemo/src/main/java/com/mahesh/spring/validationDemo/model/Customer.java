@@ -21,7 +21,8 @@ public class Customer {
 
 @Min(value=0,message = "must be >=0")
 @Max(value=10,message = "must be<=10")
-private int freePasses;
+@NotNull(message = "is required")
+private Integer freePasses;
     @Pattern(regexp = "^[a-zA-Z0-9]{5}", message = "Yedava")
     private String postalCode;
     public String getPostalCode() {
@@ -34,11 +35,11 @@ private int freePasses;
 
 
 
-    public int getFreePasses() {
+    public Integer getFreePasses() {
         return freePasses;
     }
 
-    public void setFreePasses(int freePasses) {
+    public void setFreePasses(Integer freePasses) {
         this.freePasses = freePasses;
     }
 
