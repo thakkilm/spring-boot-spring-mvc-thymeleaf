@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
 <head>
     <meta charset="UTF-8">
     <title>Student Registration Form</title>
@@ -27,7 +27,10 @@
 <!--    <input type="radio" th:field="*{language}" th:value="Java">Java</input>-->
 <!--    <input type="radio" th:field="*{language}" th:value="Pyhton">Pyhton</input>-->
 
-
+<!--<input type="checkbox" th:field="*{checkBox}" th:value="Linux">Linux</input>-->
+<!--<input type="checkbox" th:field="*{checkBox}" th:value="MacOS">MacOS</input>-->
+<!--<input type="checkbox" th:field="*{checkBox}" th:value="'Microsoft Windows'">Microsoft Windows</input>-->
+    <input type="checkbox" th:field="*{checkBox}" th:each="tempBox: ${checkBoxes}"  th:text="${tempBox}" th:value="${tempBox}"/>
     <button type="submit">Submit</button>
 </form>
 </body>

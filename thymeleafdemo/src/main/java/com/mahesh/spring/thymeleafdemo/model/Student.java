@@ -7,6 +7,16 @@ public class Student {
 
     private String country;
     private String language;
+    private String checkBox;
+    public String getCheckBox() {
+        return checkBox;
+    }
+
+    public void setCheckBox(String checkBox) {
+        this.checkBox = checkBox;
+    }
+
+
 
     public String getLanguage() {
         return language;

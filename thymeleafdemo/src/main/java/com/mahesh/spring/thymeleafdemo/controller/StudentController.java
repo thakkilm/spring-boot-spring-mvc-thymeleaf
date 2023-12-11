@@ -18,12 +18,15 @@ public class StudentController {
 private List<String> countries;
 @Value("${languages}")
 private List<String> languages;
+@Value("${checkBoxes}")
+private List<String> checkBoxes;
     @GetMapping("/showStudentForm")
     public String showForm(Model theModel){
 
         theModel.addAttribute("student",new Student());
         theModel.addAttribute("countries",countries);
         theModel.addAttribute("languages",languages);
+        theModel.addAttribute("checkBoxes",checkBoxes);
         return "student-form";
 
     }
