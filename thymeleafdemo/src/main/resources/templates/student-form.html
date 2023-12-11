@@ -22,9 +22,10 @@
 <!--        <option value="germany">Germany</option>-->
     </select>
     <br><br>
-    <input type="radio" th:field="*{language}" th:value="Go">Go</input>
-    <input type="radio" th:field="*{language}" th:value="Java">Java</input>
-    <input type="radio" th:field="*{language}" th:value="Pyhton">Pyhton</input>
+    <input type="radio" th:field="*{language}" th:each="tempLanguage: ${languages}" th:value="${tempLanguage}" th:text="${tempLanguage}"/>
+<!--    <input type="radio" th:field="*{language}" th:value="Go">Go</input>-->
+<!--    <input type="radio" th:field="*{language}" th:value="Java">Java</input>-->
+<!--    <input type="radio" th:field="*{language}" th:value="Pyhton">Pyhton</input>-->
 
 
     <button type="submit">Submit</button>
