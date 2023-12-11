@@ -1,0 +1,11 @@
+Important Annotations to revise in this Project
+
+1)@InitBinder -> To perform validations on Strings
+2)@Valid
+3)@ModelAttributes -> To retriew data 
+
+The below are for creating custom validation annotations
+
+4)@Constraint(validatedBy = CourseCodeConstraintValidator.class)
+5)@Target({ElementType.METHOD,ElementType.FIELD})
+6)@Retention(RetentionPolicy.RUNTIME )
