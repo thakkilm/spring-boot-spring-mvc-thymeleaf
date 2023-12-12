@@ -11,6 +11,9 @@
     <input type="text" th:field="*{lastName}" placeholder="Last name">
     <input type="text" th:field="*{email}" placeholder="Email">
     <button type="submit" class="btn btn-info col2">Save</button>
+
   </form>
+<hr>
+<a th:href="@{/employees/list}">Back to Employees List</a>
 </body>
 </html>
